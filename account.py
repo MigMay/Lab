@@ -1,9 +1,4 @@
-
-
-
 class Account:
-
-
     def __init__(self, name):
         self.__account_name = name
         self.__account_balance = 0
@@ -23,8 +18,7 @@ class Account:
             return False
 
     def get_balance(self):
-        pass
+        return self.__account_balance
 
     def get_name(self):
-        pass
-
+        return self.__account_name

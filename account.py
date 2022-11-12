@@ -1,11 +1,11 @@
 class Account:
-    def __init__(self, name: [str | None]) -> None:
+    def __init__(self, name: str | None) -> None:
         """
         Initialize an Account object.
 
         :param name: The first name of the account.
         """
-        self.__account_name: str = name
+        self.__account_name: str | None = name
         self.__account_balance: float = 0
 
     def deposit(self, amount):

@@ -9,7 +9,8 @@ class Account:
         self.__account_balance = 0
 
     def deposit(self, amount):
-        pass
+        if amount > 0:
+            self.__account_balance += amount
 
     def withdraw(self, amount):
         pass

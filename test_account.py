@@ -35,19 +35,3 @@ class Test:
         assert self.account.get_balance() == pytest.approx(1.90, abs=0.001)
         assert self.account.withdraw(0) is False
         assert self.account.get_balance() == pytest.approx(1.90, abs=0.001)
-
-    def test_get_balance(self):
-        balance = self.account.get_balance()
-        assert balance == 0
-
-        self.account.deposit(20)
-        balance = self.account.get_balance()
-        assert balance == 20
-
-        self.account.withdraw(21)
-        balance = self.account.get_balance()
-        assert balance == 20
-
-        self.account.withdraw(5.25)
-        balance = self.account.get_balance()
-        assert balance == pytest.approx(14.75, 0.01)

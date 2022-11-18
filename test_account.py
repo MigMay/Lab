@@ -14,10 +14,8 @@ class Test:
         assert self.account.get_balance() == 0
 
     def test_deposit(self):
-        success = self.account.deposit(15.10)
-        assert success
-        success = self.account.deposit(-5.25)
-        assert not success
+        assert self.account.deposit(15.10)
+        assert not self.account.deposit(-5.25)
 
     def test_withdraw(self):
         self.account.deposit(20)

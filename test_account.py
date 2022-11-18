@@ -9,6 +9,10 @@ class Test:
     def teardown_method(self):
         del self.account
 
+    def test_init(self):
+        name = self.account.get_name()
+        assert name == 'bob'
+
     def test_deposit(self):
         success = self.account.deposit(15.10)
         assert success
@@ -39,7 +43,3 @@ class Test:
         self.account.withdraw(5.25)
         balance = self.account.get_balance()
         assert balance == pytest.approx(14.75, 0.01)
-
-    def test_get_name(self):
-        name = self.account.get_name()
-        assert name == 'bob'

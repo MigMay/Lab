@@ -23,9 +23,9 @@ class Test:
 
     def test_withdraw(self):
         self.account.deposit(20)
-        assert self.account.withdraw(15.10)
-        assert not self.account.withdraw(25.25)
-        assert not self.account.withdraw(-5.25)
+        assert self.account.withdraw(15.10) is True
+        assert self.account.withdraw(25.25) is False
+        assert self.account.withdraw(-5.25) is False
 
     def test_get_balance(self):
         balance = self.account.get_balance()

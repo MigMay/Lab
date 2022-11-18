@@ -26,7 +26,7 @@ class Account:
 
     def withdraw(self, amount: float) -> bool:
         """
-        withdrawing amount into account
+        withdrawing amount from account
 
         :param amount: The amount being withdrawn
         :return: True if withdraw was successful, otherwise false

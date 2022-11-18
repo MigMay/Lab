@@ -7,8 +7,8 @@ class Account:
 
         :param name: The first name of the account.
         """
-        self.__account_name: str = name
-        self.__account_balance: float = 0
+        self.__account_name = name
+        self.__account_balance = 0
 
     def deposit(self, amount: float) -> bool:
         """
@@ -28,7 +28,7 @@ class Account:
         """
         withdrawing amount into account
 
-        :param amount: The amount being withrawn
+        :param amount: The amount being withdrawn
         :return: True if withdraw was successful, otherwise false
         """
         if 0 < amount < self.__account_balance:

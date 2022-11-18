@@ -10,8 +10,7 @@ class Test:
         del self.account
 
     def test_init(self):
-        name = self.account.get_name()
-        assert name == 'bob'
+        assert self.account.get_name() == 'bob'
 
     def test_deposit(self):
         success = self.account.deposit(15.10)

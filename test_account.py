@@ -1,6 +1,7 @@
 import pytest
 from account import *
 
+
 class Test:
     def setup_method(self):
         self.account = Account('bob')
@@ -38,7 +39,6 @@ class Test:
         self.account.withdraw(5.25)
         balance = self.account.get_balance()
         assert balance == pytest.approx(14.75, 0.01)
-
 
     def test_get_name(self):
         name = self.account.get_name()

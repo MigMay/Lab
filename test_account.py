@@ -11,6 +11,7 @@ class Test:
 
     def test_init(self):
         assert self.account.get_name() == 'bob'
+        assert self.account.get_balance() == 0
 
     def test_deposit(self):
         success = self.account.deposit(15.10)
